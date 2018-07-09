@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
 			j++;
     }
   fclose (file);
+  free(resultado);
 
 	// Kruskal
 	Arista result[V];
@@ -117,6 +118,9 @@ int main(int argc, char *argv[])
       // Imprimimos la arista agregada
       fprintf(output, "%i\n",result[m].posicion);
 		}
+    fclose(output);
+    free(arista);
+    free(subsets);
 
 	// Retorno ok
 	return 0;
